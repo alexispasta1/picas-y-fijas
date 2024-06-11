@@ -1,0 +1,738 @@
+#include <iostream>
+#include <stdlib.h>
+#include <windows.h>
+
+
+int main()
+{
+int g = 0;
+int h = 0;
+int j = 0;
+int k = 0;
+char r;
+int s = 0;
+int a[4], b[4],c,d,w;
+char m;
+do {
+system("cls");
+system("COLOR C0");
+cout<<"\n";
+cout<<"\n";
+cout<<"\n";
+cout<<"\n";
+cout<<"\n";
+cout<<"\n";
+cout<<"\n";
+cout<<"\n";
+cout<<"    ##### ## ###### ####### ###### ##  ## ###### ## ###### #######  ####### \n ";
+cout<<"   ## ## ## ###### ##   ## ##     ##  ## ##     ##   ##   ##   ##  ##       \n ";
+cout<<"   ##### ## ##     ####### ###### ##  ## ###### ##   ##   #######  #######  \n ";
+cout<<"   ##    ## ##     ##   ##     ## ###### ##     ## # ##   ##   ##       ##  \n ";
+cout<<"   ##    ## ###### ##   ##     ##   ##   ##     ## # ##   ##   ##       ##  \n ";
+cout<<"   ##    ## ###### ##   ## ######   ##   ##     ## ####   ##   ##  #######  \n ";
+Beep(523,500);
+Beep(587,500);
+Beep(659,500);
+Beep(698,500);
+Beep(784,500);
+Beep(876,500);
+Beep(982,500);
+Beep(1050,500);
+system("pause");
+system("cls");
+
+for(c=1;c<=4;c++)
+{
+cout<<"\n";
+cout<<"\n";
+cout<<"\n";
+cout<<"    ##### ## ###### ####### ###### ##  ## ###### ## ###### #######  ####### \n ";
+cout<<"   ## ## ## ###### ##   ## ##     ##  ## ##     ##   ##   ##   ##  ##       \n ";
+cout<<"   ##### ## ##     ####### ###### ##  ## ###### ##   ##   #######  #######  \n ";
+cout<<"   ##    ## ##     ##   ##     ## ###### ##     ## # ##   ##   ##       ##  \n ";
+cout<<"   ##    ## ###### ##   ##     ##   ##   ##     ## # ##   ##   ##       ##  \n ";
+cout<<"   ##    ## ###### ##   ## ######   ##   ##     ## ####   ##   ##  #######  \n ";
+
+cout<<"\n";
+cout<<"\n";
+
+cout<<"Ingrese el digito numero "<<c<<" del numero 'fijo'"<<endl;
+cin>>a[c];
+Beep(523,500);
+system("cls");
+}
+               //identificar si los numeros estan repetidos
+if(a[1]==a[2] || a[1]==a[3] || a[1]==a[4])
+{
+cout<<"no puede digitar el mismo numero varias veces! "<<endl;
+system("pause");
+}
+if(a[2]==a[3])
+{
+cout<<"no puede digitar el mismo numero varias veces! "<<endl;
+system("pause");
+}
+if(a[3]==a[1] || a[3]==a[4])
+{
+cout<<"no puede digitar el mismo numero varias veces! "<<endl;
+system("pause");
+}
+if(a[4]==a[2])
+{
+cout<<"no puede digitar el mismo numero varias veces! "<<endl;
+system("pause");
+}
+
+system("cls");
+do{
+system("cls");
+cout<<"Ahora el contrincante: "<<endl;
+system("COLOR F0");
+for (d=1;d<=4;d++)
+{cout<<"Ingrese el digito numero "<<d<<" del numero 'fijo'"<<endl;
+cin>>b[d];
+Beep(1050,500);
+system("cls");
+}
+ //identificar si los numeros estan repetidos
+if(b[1]==b[2] || b[1]==b[3] || b[1]==b[4])
+{
+cout<<"no puede digitar el mismo numero varias veces! "<<endl;
+system("pause");
+}
+if(b[2]==b[3])
+{
+cout<<"no puede digitar el mismo numero varias veces! "<<endl;
+system("pause");
+}
+if(b[3]==b[1] || b[3]==b[4])
+{
+cout<<"no puede digitar el mismo numero varias veces! "<<endl;
+system("pause");
+}
+if(b[4]==b[2])
+{
+cout<<"no puede digitar el mismo numero varias veces! "<<endl;
+system("pause");
+}
+
+             // aqui comienza la identificacion de los numeros
+if(b[1]==a[1] && b[2]==a[2] && b[3]==a[3] && b[4]==a[4])
+{
+cout<<"tienes 4 fijas, ganaste! presione 's' si desea continuar"<<endl;
+cin>>r;
+}
+
+if(b[1]!=a[1] && b[2]!=a[2] && b[3]!=a[3] && b[4]!=a[4])
+{
+if(a[1]==b[2] || a[1]==b[3] || a[1]==b[4])
+{
+g=1;
+}
+else
+{
+g=0;
+}
+if(a[2]==b[1] || a[2]==b[3] || a[2]==b[4])
+{
+h=1;
+}
+else
+{
+h=0;
+}
+if(a[3]==b[1] || a[3]==b[2] || a[3]==b[4])
+{
+j=1;
+}
+else
+{
+j=0;
+}
+if(a[4]==b[1] || a[4]==b[2] || a[4]==b[3])
+{
+k=1;
+}
+else
+{
+k=0;
+}
+
+cout<<"tiene "<<(g+h+j+k)<<" picas y 0 fijas! \n";
+cout<<"digite w si desea re-intentar: ";
+cin>>r;
+}
+if(b[1]!=a[1] && b[2]!=a[2] && b[3]!=a[3] && b[4]==a[4])
+{
+if(a[1]==b[2] || a[1]==b[3] || a[1]==b[4])
+{
+g=1;
+}
+else
+{
+g=0;
+}
+if(a[2]==b[1] || a[2]==b[3] || a[2]==b[4])
+{
+h=1;
+}
+else
+{
+h=0;
+}
+if(a[3]==b[1] || a[3]==b[2] || a[3]==b[4])
+{
+j=1;
+}
+else
+{
+j=0;
+}
+if(a[4]==b[1] || a[4]==b[2] || a[4]==b[3])
+{
+k=1;
+}
+else
+{
+k=0;
+}
+
+cout<<"tiene "<<(g+h+j+k)<<" picas y 1 fija! \n";
+cout<<"digite w si desea re-intentar: ";
+cin>>r;
+}
+if(b[1]!=a[1] && b[2]!=a[2] && b[3]==a[3] && b[4]!=a[4])
+{
+if(a[1]==b[2] || a[1]==b[3] || a[1]==b[4])
+{
+g=1;
+}
+else
+{
+g=0;
+}
+if(a[2]==b[1] || a[2]==b[3] || a[2]==b[4])
+{
+h=1;
+}
+else
+{
+h=0;
+}
+if(a[3]==b[1] || a[3]==b[2] || a[3]==b[4])
+{
+j=1;
+}
+else
+{
+j=0;
+}
+if(a[4]==b[1] || a[4]==b[2] || a[4]==b[3])
+{
+k=1;
+}
+else
+{
+k=0;
+}
+
+cout<<"tiene "<<(g+h+j+k)<<" picas y 1 fija! \n";
+cout<<"digite w si desea re-intentar: ";
+cin>>r;                    ////////////////////////
+}
+
+if(b[1]!=a[1] && b[2]!=a[2] && b[3]==a[3] && b[4]==a[4])
+{
+if(a[1]==b[2] || a[1]==b[3] || a[1]==b[4])
+{
+g=1;
+}
+else
+{
+g=0;
+}
+if(a[2]==b[1] || a[2]==b[3] || a[2]==b[4])
+{
+h=1;
+}
+else
+{
+h=0;
+}
+if(a[3]==b[1] || a[3]==b[2] || a[3]==b[4])
+{
+j=1;
+}
+else
+{
+j=0;
+}
+if(a[4]==b[1] || a[4]==b[2] || a[4]==b[3])
+{
+k=1;
+}
+else
+{
+k=0;
+}
+
+cout<<"tiene "<<(g+h+j+k)<<" picas y 2 fijas! \n";
+cout<<"digite w si desea re-intentar: ";
+cin>>r;
+}
+if(b[1]!=a[1] && b[2]==a[2] && b[3]!=a[3] && b[4]!=a[4])
+{
+if(a[1]==b[2] || a[1]==b[3] || a[1]==b[4])
+{
+g=1;
+}
+else
+{
+g=0;
+}
+if(a[2]==b[1] || a[2]==b[3] || a[2]==b[4])
+{
+h=1;
+}
+else
+{
+h=0;
+}
+if(a[3]==b[1] || a[3]==b[2] || a[3]==b[4])
+{
+j=1;
+}
+else
+{
+j=0;
+}
+if(a[4]==b[1] || a[4]==b[2] || a[4]==b[3])
+{
+k=1;
+}
+else
+{
+k=0;
+}
+
+cout<<"tiene "<<(g+h+j+k)<<" picas y 1 fija! \n";
+cout<<"digite w si desea re-intentar: ";
+cin>>r;
+}
+if(b[1]!=a[1] && b[2]==a[2] && b[3]!=a[3] && b[4]==a[4])
+{
+if(a[1]==b[2] || a[1]==b[3] || a[1]==b[4])
+{
+g=1;
+}
+else
+{
+g=0;
+}
+if(a[2]==b[1] || a[2]==b[3] || a[2]==b[4])
+{
+h=1;
+}
+else
+{
+h=0;
+}
+if(a[3]==b[1] || a[3]==b[2] || a[3]==b[4])
+{
+j=1;
+}
+else
+{
+j=0;
+}
+if(a[4]==b[1] || a[4]==b[2] || a[4]==b[3])
+{
+k=1;
+}
+else
+{
+k=0;
+}
+
+cout<<"tiene "<<(g+h+j+k)<<" picas y 2 fijas! \n";
+cout<<"digite w si desea re-intentar: ";
+cin>>r;
+}
+if(b[1]!=a[1] && b[2]==a[2] && b[3]==a[3] && b[4]!=a[4])
+{
+if(a[1]==b[2] || a[1]==b[3] || a[1]==b[4])
+{
+g=1;
+}
+else
+{
+g=0;
+}
+if(a[2]==b[1] || a[2]==b[3] || a[2]==b[4])
+{
+h=1;
+}
+else
+{
+h=0;
+}
+if(a[3]==b[1] || a[3]==b[2] || a[3]==b[4])
+{
+j=1;
+}
+else
+{
+j=0;
+}
+if(a[4]==b[1] || a[4]==b[2] || a[4]==b[3])
+{
+k=1;
+}
+else
+{
+k=0;
+}
+
+cout<<"tiene "<<(g+h+j+k)<<" picas y 2 fijas! ";
+cout<<"digite w si desea re-intentar";
+cin>>r;
+}
+if(b[1]!=a[1] && b[2]==a[2] && b[3]==a[3] && b[4]==a[4])
+{
+if(a[1]==b[2] || a[1]==b[3] || a[1]==b[4])
+{
+g=1;
+}
+else
+{
+g=0;
+}
+if(a[2]==b[1] || a[2]==b[3] || a[2]==b[4])
+{
+h=1;
+}
+else
+{
+h=0;
+}
+if(a[3]==b[1] || a[3]==b[2] || a[3]==b[4])
+{
+j=1;
+}
+else
+{
+j=0;
+}
+if(a[4]==b[1] || a[4]==b[2] || a[4]==b[3])
+{
+k=1;
+}
+else
+{
+k=0;
+}
+
+cout<<"tiene "<<(g+h+j+k)<<" picas y 3 fijas! \n"<<endl;
+cout<<"digite w si desea re-intentar: ";
+cin>>r;
+}
+if(b[1]==a[1] && b[2]!=a[2] && b[3]!=a[3] && b[4]!=a[4])
+{
+if(a[1]==b[2] || a[1]==b[3] || a[1]==b[4])
+{
+g=1;
+}
+else
+{
+g=0;
+}
+if(a[2]==b[1] || a[2]==b[3] || a[2]==b[4])
+{
+h=1;
+}
+else
+{
+h=0;
+}
+if(a[3]==b[1] || a[3]==b[2] || a[3]==b[4])
+{
+j=1;
+}
+else
+{
+j=0;
+}
+if(a[4]==b[1] || a[4]==b[2] || a[4]==b[3])
+{
+k=1;
+}
+else
+{
+k=0;
+}
+
+cout<<"tiene "<<(g+h+j+k)<<" picas y 1 fija! \n"<<endl;
+cout<<"digite w si desea re-intentar: ";
+cin>>r;
+}
+if(b[1]==a[1] && b[2]!=a[2] && b[3]!=a[3] && b[4]==a[4])
+{
+if(a[1]==b[2] || a[1]==b[3] || a[1]==b[4])
+{
+g=1;
+}
+else
+{
+g=0;
+}
+if(a[2]==b[1] || a[2]==b[3] || a[2]==b[4])
+{
+h=1;
+}
+else
+{
+h=0;
+}
+if(a[3]==b[1] || a[3]==b[2] || a[3]==b[4])
+{
+j=1;
+}
+else
+{
+j=0;
+}
+if(a[4]==b[1] || a[4]==b[2] || a[4]==b[3])
+{
+k=1;
+}
+else
+{
+k=0;
+}
+
+cout<<"tiene "<<(g+h+j+k)<<" picas 2 fijas! \n";
+cout<<"digite w si desea re-intentar: ";
+cin>>r;
+}
+if(b[1]==a[1] && b[2]!=a[2] && b[3]==a[3] && b[4]!=a[4])
+{
+if(a[1]==b[2] || a[1]==b[3] || a[1]==b[4])
+{
+g=1;
+}
+else
+{
+g=0;
+}
+if(a[2]==b[1] || a[2]==b[3] || a[2]==b[4])
+{
+h=1;
+}
+else
+{
+h=0;
+}
+if(a[3]==b[1] || a[3]==b[2] || a[3]==b[4])
+{
+j=1;
+}
+else
+{
+j=0;
+}
+if(a[4]==b[1] || a[4]==b[2] || a[4]==b[3])
+{
+k=1;
+}
+else
+{
+k=0;
+}
+
+cout<<"tiene "<<(g+h+j+k)<<" picas 2 fijas! \n";
+cout<<"digite w si desea re-intentar: ";
+cin>>r;
+}
+if(b[1]==a[1] && b[2]!=a[2] && b[3]==a[3] && b[4]==a[4])
+{
+if(a[1]==b[2] || a[1]==b[3] || a[1]==b[4])
+{
+g=1;
+}
+else
+{
+g=0;
+}
+if(a[2]==b[1] || a[2]==b[3] || a[2]==b[4])
+{
+h=1;
+}
+else
+{
+h=0;
+}
+if(a[3]==b[1] || a[3]==b[2] || a[3]==b[4])
+{
+j=1;
+}
+else
+{
+j=0;
+}
+if(a[4]==b[1] || a[4]==b[2] || a[4]==b[3])
+{
+k=1;
+}
+else
+{
+k=0;
+}
+
+cout<<"tiene "<<(g+h+j+k)<<" picas y 3 fijas! \n";
+cout<<"digite w si desea re-intentar: ";
+cin>>r;
+}
+if(b[1]==a[1] && b[2]==a[2] && b[3]!=a[3] && b[4]!=a[4])
+{
+if(a[1]==b[2] || a[1]==b[3] || a[1]==b[4])
+{
+g=1;
+}
+else
+{
+g=0;
+}
+if(a[2]==b[1] || a[2]==b[3] || a[2]==b[4])
+{
+h=1;
+}
+else
+{
+h=0;
+}
+if(a[3]==b[1] || a[3]==b[2] || a[3]==b[4])
+{
+j=1;
+}
+else
+{
+j=0;
+}
+if(a[4]==b[1] || a[4]==b[2] || a[4]==b[3])
+{
+k=1;
+}
+else
+{
+k=0;
+}
+
+cout<<"tiene "<<(g+h+j+k)<<" picas 2 fijas! \n";
+cout<<"digite w si desea re-intentar: ";
+cin>>r;
+}
+if(b[1]==a[1] && b[2]==a[2] && b[3]!=a[3] && b[4]==a[4])
+{
+if(a[1]==b[2] || a[1]==b[3] || a[1]==b[4])
+{
+g=1;
+}
+else
+{
+g=0;
+}
+if(a[2]==b[1] || a[2]==b[3] || a[2]==b[4])
+{
+h=1;
+}
+else
+{
+h=0;
+}
+if(a[3]==b[1] || a[3]==b[2] || a[3]==b[4])
+{
+j=1;
+}
+else
+{
+j=0;
+}
+if(a[4]==b[1] || a[4]==b[2] || a[4]==b[3])
+{
+k=1;
+}
+else
+{
+k=0;
+}
+
+cout<<"tiene "<<(g+h+j+k)<<" picas 3 fijas! \n";
+cout<<"digite w si desea re-intentar: ";
+cin>>r;
+}
+if(b[1]==a[1] && b[2]==a[2] && b[3]==a[3] && b[4]!=a[4])
+{
+if(a[1]==b[2] || a[1]==b[3] || a[1]==b[4])
+{
+g=1;
+}
+else
+{
+g=0;
+}
+if(a[2]==b[1] || a[2]==b[3] || a[2]==b[4])
+{
+h=1;
+}
+else
+{
+h=0;
+}
+if(a[3]==b[1] || a[3]==b[2] || a[3]==b[4])
+{
+j=1;
+}
+else
+{
+j=0;
+}
+if(a[4]==b[1] || a[4]==b[2] || a[4]==b[3])
+{
+k=1;
+}
+else
+{
+k=0;
+}
+
+cout<<"tiene "<<(g+h+j+k)<<" picas y 3 fijas! \n";
+cout<<"digite w si desea re-intentar";
+cin>>r;
+
+}
+
+}
+while (r!='s');
+
+
+cout<<"Ganaste"<<endl;
+system("COLOR A0");
+
+
+
+
+
+
+
+
+cout<<"digite enter si desea continuar"<<endl;
+system("pause");
+
+
+}
+while (r=='s');
+cin.get();
+
+return(0);
+
+}
